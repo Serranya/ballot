@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8">
+<wicket:remove>
+	<title>[neue Abstimmung erstellen]</title>
+</wicket:remove>
+</head>
+<body>
+	<main>
+		<wicket:panel>
+			<div wicket:id="feedback"></div>
+			<h1>
+				<wicket:message key="title">[neue Abstimmung erstellen]</wicket:message>
+			</h1>
+			<form wicket:id="form">
+				<span wicket:id="name">[Name der Umfrage]</span><br>
+				<wicket:message key="addNewChoice">[Optionen hinzufügen]</wicket:message>
+				<br>
+				<input wicket:id="newChoice" autofocus="autofocus" /> <input
+					wicket:id="addNewChoice" type="submit" value="+" /><br>
+			</form>
+			<button wicket:id="done">
+				<wicket:message key="done">[fertig]</wicket:message>
+			</button>
+			<ul wicket:id="choicesContainer">
+				<li wicket:id="choices"><span wicket:id="choice">[Option]</span>
+					<a wicket:id="deleteChoice">X</a></li>
+			</ul>
+		</wicket:panel>
+	</main>
+</body>
+</html>

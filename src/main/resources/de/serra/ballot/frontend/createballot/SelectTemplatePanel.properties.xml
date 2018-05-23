@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="name.label">Titel eingeben</entry>
+	<entry key="namePlaceholder">z.B. Was essen wir heute?</entry>
+	<entry key="continue">weiter</entry>
+	<entry key="seperator">oder</entry>
+	<entry key="templates.label">eine der letzen als Vorlage nehmen</entry>
+	<entry key="template.eating.label">Was essen wir heute?</entry>
+</properties>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8">
+<title>[neue Abstimmung erstellen]</title>
+</head>
+<body>
+	<main>
+		<wicket:panel>
+			<h1>
+				<wicket:message key="title">[neue Abstimmung erstellen]</wicket:message>
+			</h1>
+			<div wicket:id="feedback"></div>
+			<form wicket:id="nameForm">
+				<wicket:message key="name.label">[Titel eingeben]</wicket:message>
+				<br>
+				<input wicket:id="name" placeholder="[z.B. Was essen wir heute?]"
+					wicket:message="placeholder:namePlaceholder" autofocus="autofocus" />
+				<br>
+				<input type="submit" value="[weiter]" wicket:message="value:continue">
+			</form>
+			<div>
+				------
+				<wicket:message key="seperator">[oder]</wicket:message>
+				------
+			</div>
+			<wicket:message key="templates.label">[eine der letzen als Vorlage nehmen]</wicket:message>
+			<br>
+			<input wicket:id="eatingTemplate" type="submit"
+				wicket:message="value:template.eating.label"
+				value="[Was essen wir heute?]">
+		</wicket:panel>
+	</main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8">
+<wicket:remove>
+	<title>[Abstimmungen]</title>
+</wicket:remove>
+</head>
+<body>
+	<main> <wicket:extend>
+		<h1>
+			<wicket:message key="activeBallots">[Laufende Abstimmungen]</wicket:message>
+		</h1>
+		<wicket:enclosure child="ballots">
+			<ol>
+				<li wicket:id="ballots">
+					<div wicket:id="ballot">
+						<h2 wicket:id="name">[Was essen wir heute?]</h2>
+						<div wicket:id="remaining">[noch 4 Minuten]</div>
+						<div wicket:id="createdBefore">[vor 2 Minuten erstellt]</div>
+					</div> <span wicket:id="answers">6</span> <wicket:message key="answers">[Antworten]</wicket:message>
+					<br />
+				</li>
+			</ol>
+		</wicket:enclosure>
+		<a wicket:id="createBallot"> <wicket:message key="createBallot">[neu]</wicket:message>
+		</a>
+	</wicket:extend> </main>
+</body>
+</html>

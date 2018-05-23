@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8">
+<wicket:remove>
+	<title>[Was essen wir heute?]</title>
+</wicket:remove>
+</head>
+<body>
+	<main>
+		<wicket:panel>
+			<caption wicket:id="caption"></caption>
+			<tr>
+				<th>
+					<div wicket:id="topLabel">[A]</div>
+					<div wicket:id="leftLabel">[B]</div>
+				</th>
+				<th wicket:id="topLabels">
+					<wicket:container wicket:id="topLabel">[Element]</wicket:container>
+				</th>
+			</tr>
+			<tr wicket:id="rows">
+				<th wicket:id="topLabel"></th>
+				<td wicket:id="data">
+					<wicket:container wicket:id="content">[Cell]</wicket:container>
+				</td>
+			</tr>
+		</wicket:panel>
+	</main>
+</body>
+</html>
