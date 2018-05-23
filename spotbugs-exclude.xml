@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter
+	xmlns="https://github.com/spotbugs/filter/3.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0
+                                    https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0/spotbugs/etc/findbugsfilter.xsd">
+	<!-- Exclude immutable generated classes TODO -->
+	<Match>
+		<Or>
+			<Class name="~^.*\.Immutable.*" />
+			<Class name="~^.*\.Modifiable.*" />
+		</Or>
+	</Match>
+	<!-- exclude service fields from SE_BAD_FIELD Those should be wired in with 
+		@SpringBean and should be serializable TODO recognize false positive with 
+		@SpringBean instead of naming conventions -->
+	<Match>
+		<Or>
+			<Field name="~.*Service$" />
+			<Field name="~.*Repository$" />
+		</Or>
+		<BugCode name="Se" />
+	</Match>
+</FindBugsFilter>

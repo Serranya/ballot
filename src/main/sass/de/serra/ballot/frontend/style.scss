@@ -1,0 +1,53 @@
+$matrix-color-a: #c0c0ff;
+$matrix-color-b: #ffc0c0;
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+ol.choice-list, .choice-list ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.choice-list {
+	.before, & .after { // drop zone
+		background-color: green;
+		height: 2rem;;
+	}
+}
+
+.vote-matrix tr {
+
+	&:first-child th {
+		&:first-child {
+			background:linear-gradient(to top right,$matrix-color-b 49.5%,#aaa 49.5%,#aaa 50.5%,$matrix-color-a 50.5%);
+
+			div:first-child {
+				text-align: right;
+			}
+		}
+
+		&:not(:first-child) {
+			background-color: $matrix-color-a;
+		}
+	}
+
+	&:not(:first-child) th:first-child {
+		background-color: $matrix-color-b;
+	}
+
+	td {
+		&[data-winner="a"] {
+			background-color: $matrix-color-a;
+		}
+		&[data-winner="b"] {
+			background-color: $matrix-color-b;
+		}
+	}
+}

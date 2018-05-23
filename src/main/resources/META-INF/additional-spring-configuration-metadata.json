@@ -1,0 +1,19 @@
+{
+	"hints": [],
+	"groups": [
+		{
+			"sourceType": "de.serra.ballot.frontend.BallotRepositoryImpl",
+			"name": "BallotRepository",
+			"description": "Configurations regarding the ballot storage."
+		}
+	],
+	"properties": [
+		{
+			"sourceType": "de.serra.ballot.frontend.BallotRepositoryImpl",
+			"name": "BallotRepository.fixed-delay",
+			"type": "java.lang.Long",
+			"description": "The period in milliseconds between the end of the last invocation and the next of the old ballot removal job.",
+			"defaultValue": 30000
+		}
+	]
+}

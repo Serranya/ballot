@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8">
+<wicket:remove>
+	<title>[Was essen wir heute?]</title>
+</wicket:remove>
+</head>
+<body>
+	<main>
+		<wicket:extend>
+			<h1 wicket:id="header">[Was essen wir heute?]</h1>
+			<ol>
+				<li wicket:id="winners">
+					<ul>
+						<li wicket:id="winner"></li>
+					</ul>
+				</li>
+			</ol>
+			<button wicket:id="showStatsForNerds" type="button">
+				<wicket:message key="statsForNerds">[Stats for Nerds]</wicket:message>
+			</button>
+			<wicket:container wicket:id="statsForNerds">
+				<table wicket:id="preferenceMatrix" class="vote-matrix"></table>
+				<table wicket:id="strongestPathMatrix" class="vote-matrix"></table>
+			</wicket:container>
+			<wicket:fragment wicket:id="cellContent">
+				<div wicket:id="columnVotes">[A: 7]</div>
+				<div wicket:id="rowVotes">[B: 13]</div>
+			</wicket:fragment>
+		</wicket:extend>
+	</main>
+</body>
+</html>
